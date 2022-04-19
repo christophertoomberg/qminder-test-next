@@ -7,15 +7,7 @@ export default function PostingDetails({ venue }: any) {
   );
 }
 
-
-export async function getStaticPaths() {
-  return {
-    paths: [],
-    fallback: 'blocking'
-  };
-}
-
-export async function getStaticProps({ params }: any) {
+export async function getServerSideProps({ params }: any) {
 
   const URL = `https://java-spring-qminder-test-task.herokuapp.com/venues/${params.id}`;
 

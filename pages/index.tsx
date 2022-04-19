@@ -13,7 +13,7 @@ function Home({ venues }: any) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const URL = 'https://java-spring-qminder-test-task.herokuapp.com/venues';
 
   const response = await fetch(URL);
